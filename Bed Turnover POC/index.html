@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Housekeeping / Bed Turnover Dispatch – POC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Housekeeping / Bed Turnover Dispatch – POC</h1>
+    <div class="metrics" id="metrics">
+      <div class="metric"><span class="metric-label">Avg Turnover</span><span class="metric-value" id="m-avg">--</span><span class="metric-unit">min</span></div>
+      <div class="metric"><span class="metric-label">Available</span><span class="metric-value" id="m-available">--</span></div>
+      <div class="metric"><span class="metric-label">Pending</span><span class="metric-value" id="m-pending">--</span></div>
+    </div>
+  </header>
+
+  <div id="error-banner" class="error-banner" role="alert" hidden>
+    <span id="error-text"></span>
+    <button id="error-close" aria-label="Dismiss">×</button>
+  </div>
+
+  <main id="wards" class="wards">
+    <p class="loading">Loading beds…</p>
+  </main>
+
+  <footer class="legend">
+    <span><i class="dot bed-available"></i> Available</span>
+    <span><i class="dot bed-cleaning"></i> Cleaning</span>
+    <span><i class="dot bed-occupied"></i> Occupied</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
